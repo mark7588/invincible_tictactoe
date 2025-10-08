@@ -1,0 +1,30 @@
+/* Custom styles for the board grid */
+.grid-cell {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border: 4px solid #1f2937; /* Darker border */
+}
+.grid-cell:hover:not([data-value]) {
+    background-color: #374151; /* Dark hover effect on empty cells */
+}
+/* Custom font for better game feel */
+body { font-family: 'Inter', sans-serif; background-color: #111827; }
+
+/* Specific coloring for X and O */
+.player-x { color: #f87171; } /* Reddish for User (X) */
+.player-o { color: #60a5fa; } /* Bluish for AI (O) */
+
+/* Ensure the grid is responsive but stays square */
+.game-board-container {
+    width: 90vw; /* Use viewport width */
+    max-width: 400px; /* Max size on desktop */
+    aspect-ratio: 1 / 1; /* Keep it square */
+    margin: 0 auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}

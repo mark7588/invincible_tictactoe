@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invincible Tic-Tac-Toe</title>
+    <!-- Load Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="p-4 flex items-center justify-center min-h-screen">
+
+    <div class="w-full max-w-lg bg-gray-800 p-6 rounded-xl shadow-2xl text-white">
+        <h1 class="text-4xl font-extrabold text-center mb-2 text-yellow-400">
+            Tic-Tac-Toe: AI Edition
+        </h1>
+        <p class="text-center mb-6 text-gray-400">You are X. The AI (O) is unbeatable.</p>
+        
+        <!-- Status Display -->
+        <div id="status" class="text-xl font-semibold text-center mb-6 h-8">
+            Current Player: <span class="player-x">X</span>
+        </div>
+
+        <!-- Game Board Container -->
+        <div class="game-board-container grid grid-cols-3 grid-rows-3 gap-0 rounded-lg overflow-hidden border-4 border-gray-700">
+            <!-- Cells will be generated here by JavaScript -->
+        </div>
+
+        <!-- Control Button -->
+        <div class="mt-8 text-center">
+            <button id="resetButton" 
+                    class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg 
+                           transition transform duration-150 active:scale-95 shadow-lg">
+                Restart Game
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
